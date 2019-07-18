@@ -5,11 +5,24 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./style.css" rel="stylesheet"/>
+  <link href="assets/styles/style.css" rel="stylesheet"/>
   <title>Tripify</title>
 
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>#iconDiv {opacity:0.0}</style>
+
+  <!-- ***jQuery first, then Popper.js, then Bootstrap JS*** --> 
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- ***JavaScript file link*** -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </head>
 
@@ -57,6 +70,8 @@
               <li class="list-group-item">Shopping</li>
               <li class="list-group-item">Events</li>
             </ul>
+            <input id="userLocation"></input>
+            <button id="submit-btn">Submit</button>
           </div>
         
         
@@ -71,34 +86,28 @@
             <option value="3">Rays on the River</option>
           </select>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./eiffel-tower-1839974_1280.jpg" class="card-img-top" alt="...">
+
+
+        <div class="card" style="">
+            <!--<img src="./eiffel-tower-1839974_1280.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Map Your Location</h5>
               <p class="card-text"></p>
             </div>
-          </div>
-        <div id="container">
-      
-            <!-- Code generated at https://WeatherWidget.io -->  
-          <a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="London" data-label_2="WEATHER" data-theme="orange" >London Weather</a>
-          <script>
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
-          </script>
-          <!-- / Code generated at https://WeatherWidget.io --> 
-            
-          </div>
+          </div>-->
+          <div class="card-title"><h4>Stuff goes here</h4></div>
+          <div class="card-text" id="cityName"></div>
+          <div class="card-text" id="cityTime"></div>
+          <div class="card-text"id="currentTemp"></div>
+          <div class="card-text"id="currentWeather"></div>
+          <div class="card-text"id="iconDiv"><img id="weatherIcon" /></div>          
+          <div class="card-text"id="zomato1"></div>
+          <div class="card-text"id="zomato2"></div>
+          <div class="card-text"id="zomato3"></div>
+
       </div>    
-      <!--Create Card taking up 4 Columns-->
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text">Some quick examp</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+
+     
      
         </div>
       </div>
@@ -111,13 +120,6 @@
     </div>
   </footer>
   </body>
-  <!-- jQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
-  <!-- Bootstrap JavaScript CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
 </body>
 
