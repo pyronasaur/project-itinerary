@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
 
     $("#submit-btn").on("click", function() {
-        //event.preventDefault();
+        event.preventDefault();
         var userCity = $("#userLocation").val();
         
 
