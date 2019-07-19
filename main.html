@@ -4,6 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
   <title>Tripify</title>
@@ -33,6 +34,12 @@
   
   <!-- ***JavaScript file link*** -->
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+  <title>Tripify Sidebar</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+
 
 </head>
 
@@ -71,15 +78,18 @@
                 </ul>
             </div>                 
         </nav>
+
         
         <br>
+
         
-        
+        <br>
+       
 
        
 
      
-     
+
     <div class="row">
         <div class="col-md-3">
             <div class="panel panel-success">
@@ -90,7 +100,10 @@
                     <form id="topics-form" action="/action_page.php" class="panel-body">
                         <div class="form-group">
                             <label for="userName-input">Destination</label>
+
                             <input type="text" class="form-control" id="userLocation">
+                            <input type="text" class="form-control" id="userName-input">
+
                         </div>
                         <div class="form-group">
                             <label for="departure-input">Departure</label>
@@ -104,7 +117,9 @@
                         <div class="form-group">
                             <label for="return-input">Return</label>
                             <div class="input-group date" id="datetimepicker2">
+
                                 <input type="text" class="form-control" id="return-input" /> 
+                              
                                 <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -142,6 +157,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01"></label>
                 </div>
+
                 <div class="card" id="inputGroupSelect01" multiple>
                     <div class="card-body">
                         <!--<option selected>Choose...</option>         -->
@@ -154,6 +170,7 @@
         </div>
         <div class="col-md-3"> 
             <div class="card" style="width: 18rem;">
+
                     <div class="card-body">
                         <h5 class="card-title">Map Your Location</h5>
                               <p class="card-text"></p>
@@ -162,15 +179,21 @@
                               <div class="card-text"id="currentTemp"></div>
                               <div class="card-text"id="currentWeather"></div>
                               <div class="card-text"id="iconDiv"><img id="weatherIcon" /></div> 
+
+                <img src="./eiffel-tower-1839974_1280.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Map Your Location</h5>
+                              <p class="card-text"></p>
+
                     </div>
             </div>  
         </div>              
     </div>
-    </div>
-  </footer>
-  </body>
+   
+
   
 </body>
+
    
 
     <script> 
@@ -183,5 +206,5 @@
       });
     </script>
 
-    </body>
+   
 </html>
