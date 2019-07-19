@@ -19,56 +19,124 @@
 
 <body>
 
+    
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                    <div class="panel panel-success">
-                            <div class="panel-heading">
-                                <h2 class="panel-title">Search Parameters</h2>
+        <nav class="navbar navbar-dark success">
+            <span class="navbar-brand mb-1 h1">Gitrippi</span>
+                        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Traveller
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Kenya</a>
+                                <a class="dropdown-item" href="#">Brian</a>
+                                <a class="dropdown-item" href="#">Nick</a>
+                                <a class="dropdown-item" href="#">Mohammed</a>
                             </div>
-                            <div class="panel-body">
-                                <form id="topics-form" action="/action_page.php" class="panel-body">
-                                    <div class="form-group">
-                                        <label for="userName-input">Destination</label>
-                                        <input type="text" class="form-control" id="userName-input">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="departure-input">Departure</label>
-                                        <div class="input-group date" id="datetimepicker1">
-                                            <input type="text" class="form-control" id="departure-input" />
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="return-input">Return</label>
-                                        <div class="input-group date" id="datetimepicker2">
-                                            <input type="text" class="form-control" id="return-input" />
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="zipCode-input">Zip Code</label>
-                                        <input type="number" class="form-control" id="zipCode-input">
-                                     </div>
-                                     <div class="form-group">
-                                        <label for="tripName-input">Trip Name</label>
-                                        <input type="number" class="form-control" id="tripName-input">
-                                    </div>
-                                    <div id="buttons">
-                                        <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
-                                        <button type="reset" class="btn btn-success" id="reset-btn">Reset</button>
-                                    </div>    
-                                </form>
+                        </div>  
+                    </li>
+                </ul>
+            </div>                 
+        </nav>
+        
+        <br>
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                        <h2 class="panel-title">Search Parameters</h2>
+                </div>
+                <div class="panel-body">
+                    <form id="topics-form" action="/action_page.php" class="panel-body">
+                        <div class="form-group">
+                            <label for="userName-input">Destination</label>
+                            <input type="text" class="form-control" id="userName-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="departure-input">Departure</label>
+                            <div class="input-group date" id="datetimepicker1">
+                                <input type="text" class="form-control" id="departure-input" />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label for="return-input">Return</label>
+                            <div class="input-group date" id="datetimepicker2">
+                                <input type="text" class="form-control" id="return-input" />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode-input">Zip Code</label>
+                            <input type="number" class="form-control" id="zipCode-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="tripName-input">Trip Name</label>
+                            <input type="number" class="form-control" id="tripName-input">
+                        </div>
+                        <div id="buttons">
+                            <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
+                            <button type="reset" class="btn btn-success" id="reset-btn">Reset</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>   
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">Trip Information</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Find Restaurants</li>
+                            <li class="list-group-item">Shopping</li>
+                            <li class="list-group-item">Events</li>
+                        </ul>
+                </div>
+            </div>
+            
+        <div class="col-md-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01"></label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01" multiple>
+                        <option selected>Choose...</option>
+                        <option value="1">Carraba's Italian Grill</option>
+                        <option value="2">Ruth Chris Stakehouse</option>
+                        <option value="3">Rays on the River</option>
+                </select>
             </div>
         </div>
+        <div class="col-md-3"> 
+            <div class="card" style="width: 18rem;">
+                <img src="./eiffel-tower-1839974_1280.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Map Your Location</h5>
+                              <p class="card-text"></p>
+                    </div>
+            </div>  
+        </div>              
     </div>
+    </div>
+   
 
     <script> 
     $(function() {
