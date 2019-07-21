@@ -11,7 +11,7 @@ $( document ).ready(function() {
         
 
         //AccuWeather API data
-        var locationKey_queryURL = ("http://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKeyAccuweather + "&q=" + userCity);
+        var locationKey_queryURL = ("https://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKeyAccuweather + "&q=" + userCity);
         
         //Zomato API data
         var cityId_queryURL = ("https://developers.zomato.com/api/v2.1/cities?apikey=" + apiKeyZomato + "&q=" + userCity);
@@ -27,7 +27,7 @@ $( document ).ready(function() {
                 //var userCity = response[0].LocalizedName;
                 //$("#userCity").html("<h2>" + userCity + "</h2>");
 
-                var currentConditions_queryURL = ("http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + "?apikey=" + apiKeyAccuweather);
+                var currentConditions_queryURL = ("https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + "?apikey=" + apiKeyAccuweather);
 
                 $.ajax({
                     url: currentConditions_queryURL,
