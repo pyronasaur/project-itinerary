@@ -7,19 +7,18 @@ $(document).ready(function(){
     
     //Global vars
     var database = firebase.database();
-    var doesExist;
+    getUsers();
+    var usersSnap;
     var user;
     
     $("#button-create-user").on("click", function(){
         user = $("#name-entry").val().trim();
-        //var doesExist = checkForUser(user);
-        console.log(doesExist);
 
-        if(checkForUser(user))
+        if(checkForUser(user, usersSnap))
         {       
             console.log("user exists already");
             $("#login-message").text("Sorry, that user exists already.  Please press login or change login name.");
-            if($('alert').css('opacity') == 0)
+            if($('.alert').css('opacity') == 0)
             {
                 $('.alert').fadeIn("slow");
             }
@@ -36,7 +35,7 @@ $(document).ready(function(){
             sessionStorage.setItem("user", user);
             sessionStorage.setItem("newUser", true);
 
-            //window.location.href = "main.html";
+            window.location.href = "main.html";
         } 
         
     })
@@ -45,20 +44,20 @@ $(document).ready(function(){
 
         user = $("#name-entry").val().trim();
         
-        if(checkForUser(user))
+        if(checkForUser(user, usersSnap))
         {
             console.log("user found");
             sessionStorage.clear();
             sessionStorage.setItem("user", user);
             sessionStorage.setItem("newUser", false);
 
-            //window.location.href = "main.html";
+            window.location.href = "main.html";
         }
         else
         {
             console.log("user " + user + " does not exist");
             $("#login-message").text("Sorry, that user does not exist.  Please create new user or change login name.");
-            if($('alert').css('opacity') == 0)
+            if($('.alert').is(':hidden'))
             {
                 $('.alert').fadeIn("slow");
             }
@@ -70,28 +69,32 @@ $(document).ready(function(){
         }
     })
 
-    function checkForUser(username)
+    function checkForUser(username, snapshot)
     {
-        let exists = false;
+        var exists = false;              
+        console.log(snapshot.val());
+        snapshot.forEach(function(childSnapshot)
+        {
+            if(childSnapshot.key.toLowerCase() === username.toLowerCase())
+            {
+                console.log("found it");
+                console.log(childSnapshot.key);
+                exists = true;
+            }
+        })
+        console.log(exists);
+        return exists;
+    }
+
+    function getUsers()
+    {
         database.ref().orderByKey().once('value')
             .then(function(snapshot)
             {
                 console.log(snapshot.val());
-                snapshot.forEach(function(childSnapshot)
-                {
-                    if(childSnapshot.key.toLowerCase() === username.toLowerCase())
-                    {
-                        console.log("found it");
-                        console.log(childSnapshot.key);
-                        return exists = true;
-                    }
-                    console.log(exists);
-                })
-                console.log(exists);
-                return exists;
-            })
-            console.log(exists);
-        return exists;
+                usersSnap = snapshot;
+                //return snapshot;
+            });
     }
 
     $('.close').on("click", function(event) {
