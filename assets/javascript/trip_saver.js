@@ -6,8 +6,11 @@
   // Create a variable to reference the database.
   var database = firebase.database();
 
+  // fill dropdown with existing values
+  initDropdown();
+
   // Initial Values
-  var travelerName = "";
+  var travelerName = sessionStorage.getItem("user");
   var startDate = "";
   var endDate = "";
   var location = "";
@@ -58,7 +61,6 @@
 
         // Code for handling the push
         database.ref(travelerName+"/"+tripName).set({
-            //travelerName: travelerName,
             startDate: startDate,
             endDate: endDate,
             location: location
@@ -71,7 +73,7 @@
     var sv = snapshot.val();
     console.log(sv);
 
-    // Console.loging the last user's data
+    // Console.logging the last user's data
     console.log(sv.travelerName);
     console.log(sv.startDate);
     console.log(sv.endDate);
@@ -89,5 +91,29 @@
   }, function(errorObject) {
     console.log("Errors handled: " + errorObject.code);
   });
+
+  //function to populate dropdown on page load
+  //TODO: add API call to button selection
+  function initDropdown()
+  {
+    var user = sessionStorage.getItem("newUser");
+    if(user)
+    {
+      database.ref().orderByChild(user).once('value')
+        .then(function(snapshot)
+        {                
+            console.log(snapshot.val());
+            snapshot.forEach(function(childSnapshot)
+            {
+              var existingTrip = $("<button>");
+              existingTrip.html(childSnapshot.key);
+              existingTrip.addClass("dropdown-item");
+              existingTrip.addClass(childSnapshot.key);
+              existingTrip.addType("button");
+              $("#dropdownMenuButton").append(existingTrip);
+            })
+        })
+    }
+  }
 
 });
