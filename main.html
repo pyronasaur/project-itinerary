@@ -50,7 +50,7 @@
                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select Trip
                 </button>
-                <div class="dropdown-menu">                                
+                <div class="dropdown-menu" id="dropdownMenu">                                
                 </div>
             </div>   
         </nav>
@@ -63,10 +63,10 @@
                             <h2>Search Parameters</h2>
                     </div>
                     <div class="card-body">
-                        <form id="topics-form" action="/action_page.php" class="panel-body">
+                        <form id="topics-form" class="panel-body">
                             <div class="form-group">
-                                <label for="userName-input">Destination</label>
-                                <input type="text" class="form-control" id="userLocation">
+                                <label for="location-input">Destination</label>
+                                <input type="text" class="form-control" id="location-input">
                             </div>
                             <div class="form-group">
                                 <label for="departure-input">Departure</label>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="tripName-input">Trip Name</label>
-                                <input type="number" class="form-control" id="tripName-input">
+                                <input type="text" class="form-control" id="tripName-input">
                             </div>
                             <div id="buttons">
                                 <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
@@ -159,5 +159,10 @@
       
     </script>
 
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="assets/javascript/firebaseConf.js"></script>
+    <script src="assets/javascript/trip_saver.js"></script>
     </body>
 </html>
