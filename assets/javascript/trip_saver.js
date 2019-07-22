@@ -1,17 +1,6 @@
   $(document).ready(function(){
   console.log("will anything log?");
 
-  // Initialize Firebase
-  var firebaseConfig = {
-    apiKey: "AIzaSyAqNYooz-ezJydPPdGNfJR3Ye_bVzSUbjc",
-    authDomain: "tuesday-ad59e.firebaseapp.com",
-    databaseURL: "https://tuesday-ad59e.firebaseio.com",
-    projectId: "tuesday-ad59e",
-    storageBucket: "tuesday-ad59e.appspot.com",
-    messagingSenderId: "316297117087",
-    appId: "1:316297117087:web:07eb61fca7e1c814"
-  };
-
   firebase.initializeApp(firebaseConfig);
 
   // Create a variable to reference the database.
