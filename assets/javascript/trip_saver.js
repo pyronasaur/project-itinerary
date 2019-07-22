@@ -20,7 +20,7 @@
   $("#check-user").on("click", function(event) {
     event.preventDefault();
 
-    var nomDeDB = firebase.database().ref(travelerName);
+    var nomDeDB = firebase.database().ref();
     var inputVal = $("#traveler-input").val().trim();
     console.log(inputVal);
     console.log(nomDeDB);
@@ -33,12 +33,6 @@
     {
       console.log("they aren't equal");
     }
-
-    //nomDeDB.orderByValue().equalTo(travelerName).once('value', function(snapshot){
-      //var location = (snapshot.val().location) || 'Anonymous';
-      //console.log(location);
-      //console.log(snapshot.val());
-    //});
 
   });
 
