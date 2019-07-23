@@ -23,6 +23,8 @@
       var trippy = $(this).text();
       console.log(trippy);
       loadSavedTrip(trippy);
+      weatherCall();
+      restaurantCall();
 
     });
 
