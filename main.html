@@ -1,124 +1,175 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
 
-<head>
+<head> 
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./style.css" rel="stylesheet"/>
-  <title>Tripify</title>
+    <meta charset="UTF-8">
+    <title>Tripify Sidebar</title>
 
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--***Styling links (Bootstrap, Font Awesome, Date Picker, custom css file, etc)***-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
+    <script> src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"</script> 
+
+    <!-- ***jQuery first, then Popper.js, then Bootstrap JS*** --> 
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- ***JavaScript file link*** -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </head>
 
+
 <body>
-  <!-- Start Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <span class="navbar-brand mb-1 h1">Tripify</span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Users/kenyaking/Repositories/Bootstrap-Portfolio/portfolio.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="file:///Users/kenyaking/Repositories/Bootstrap-Portfolio/contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Select Trips
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Washington, DC</a>
-        <a class="dropdown-item" href="#">Barbados</a>
-        <a class="dropdown-item" href="#">New York, NY</a>
-      </div>
-    </div>
-    </nav>
-    
-      <div class="search-type">
-        
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              Trip Information
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Gitrippi</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Users/kenyaking/Repositories/Bootstrap-Portfolio/portfolio.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///Users/kenyaking/Repositories/Bootstrap-Portfolio/contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Find Restaurants</li>
-              <li class="list-group-item">Shopping</li>
-              <li class="list-group-item">Events</li>
-            </ul>
-          </div>
-        
-        
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01"></label>
-          </div>
-          <select class="custom-select" id="inputGroupSelect01" multiple>
-            <option selected>Choose...</option>
-            <option value="1">Carraba's Italian Grill</option>
-            <option value="2">Ruth Chris Stakehouse</option>
-            <option value="3">Rays on the River</option>
-          </select>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./eiffel-tower-1839974_1280.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Map Your Location</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        <div id="container">
-      
-            <!-- Code generated at https://WeatherWidget.io -->  
-          <a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="London" data-label_2="WEATHER" data-theme="orange" >London Weather</a>
-          <script>
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
-          </script>
-          <!-- / Code generated at https://WeatherWidget.io --> 
+
             
-          </div>
-      </div>    
-      <!--Create Card taking up 4 Columns-->
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <h6 class="card-subtitle mb-2 text-muted"></h6>
-          <p class="card-text">Some quick examp</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+                    
+            <div class="btn-group">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Trip
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">                                
+                </div>
+            </div>   
+        </nav>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <h3 id="welcome-banner" class="text-center"></h3>
+            </div>
         </div>
-      </div>
-     
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card border-success mb-3" style="max-width: 100%">
+                    <div class="card-header">
+                            <h2>Search Parameters</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="topics-form" class="panel-body">
+                            <div class="form-group">
+                                <label for="location-input">Destination</label>
+                                <input type="text" class="form-control" id="location-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="departure-input">Departure</label>
+                                <div class="input-group date" id="datetimepicker1">
+                                    <input type="text" class="form-control" id="departure-input" />
+                                    <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="return-input">Return</label>
+                                <div class="input-group date" id="datetimepicker2">
+                                    <input type="text" class="form-control" id="return-input" />
+                                    <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode-input">Zip Code</label>
+                                <input type="number" class="form-control" id="zipCode-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="tripName-input">Trip Name</label>
+                                <input type="text" class="form-control" id="tripName-input">
+                            </div>
+                            <div id="buttons">
+                                <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
+                                <button type="reset" class="btn btn-success" id="reset-btn">Reset</button>
+                            </div>    
+                        </form>
+                    </div>
+                </div>
+            </div>   
+            <div class="col-md-3">
+                <div class="card" style="max-width: 100%">
+                    <div class="card-header">Trip Information</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Find Restaurants</li>
+                         <li class="list-group-item">Shopping</li>
+                        <li class="list-group-item">Events</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                       <!-- <label class="input-group-text" for="inputGroupSelect01"></label>-->
+                    </div>
+
+                    <div class="card" id="inputGroupSelect01" >
+                        <div class="card-body">
+                            <h5 class="card-title">Top 3 Restaurants</h5>
+                            <!--<div class="card-text" id="zomato1">1</div>
+                            <div class="card-text" id="zomato2">2</div>
+                            <div class="card-text" id="zomato3">3</div>-->
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" id="zomato1"></li>
+                                 <li class="list-group-item" id="zomato2"></li>
+                                <li class="list-group-item" id="zomato3"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"> 
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Current Weather</h5>
+                        <p class="card-text"></p>
+                        <div class="card-text" id="cityName"></div>
+                        <div class="card-text" id="cityTime"></div>
+                        <div class="card-text"id="currentTemp"></div>
+                        <div class="card-text"id="currentWeather"></div>
+                        <div class="card-text"id="iconDiv"><img id="weatherIcon" /></div> 
+                    </div>  
+                </div>              
+            </div>             
         </div>
-      </div>
     </div>
-  </div>
-  <div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
-  <footer class="footer mt-auto py-3">
-    <div class="container text-center">
-      <span class="text-muted">Tripify ~ Copyright 2019. All rights reserved</span>
-    </div>
-  </footer>
-  </body>
-  <!-- jQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script> 
+    
+        $('#datetimepicker1').datepicker();
 
-  <!-- Bootstrap JavaScript CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
-</body>
+        $('#datetimepicker2').datepicker();
+      
+    </script>
 
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="assets/javascript/firebaseConf.js"></script>
+    <script src="assets/javascript/trip_saver.js"></script>
+    </body>
 </html>
