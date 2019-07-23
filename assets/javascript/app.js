@@ -1,22 +1,20 @@
-$( document ).ready(function() {
+$( document ).ready(function() { 
 
     var apiKeyAccuweather = "RRYdh1nEGTRsquMFRwDpxZArhkoYDwXg";
     var apiKeyZomato = "4aeb449d2e6f84bc1b5c89347e2c463d";
+    var userCity = "";
 
 
 
-    $("#submit-btn").on("click", function() {
-        event.preventDefault();
-        var userCity = $("#userLocation").val();
+
+    function weatherCall() {    
+        userCity = $("#location-input").val();
         
 
         //AccuWeather API data
         var locationKey_queryURL = ("https://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKeyAccuweather + "&q=" + userCity);
-        
-        //Zomato API data
-        var cityId_queryURL = ("https://developers.zomato.com/api/v2.1/cities?apikey=" + apiKeyZomato + "&q=" + userCity);
 
-        $("#userLocation").val("");
+        $("#location-input").val("");
 
         $.ajax({
             url: locationKey_queryURL,
@@ -44,9 +42,15 @@ $( document ).ready(function() {
                         }
                         //console.log(icon);
                         $("#weatherIcon").attr("src","https://apidev.accuweather.com/developers/Media/Default/WeatherIcons/" + icon + "-s.png");
-                        $("#iconDiv").animate({right: '10px',opacity: '1.0'},2000);
+                        $("#iconDiv").animate({opacity: 1.0}, 2000);
                     });
             });
+        }
+
+        function restaurantCall () {
+        
+            //Zomato API data
+            var cityId_queryURL = ("https://developers.zomato.com/api/v2.1/cities?apikey=" + apiKeyZomato + "&q=" + userCity);
 
             $.ajax({
                 url: cityId_queryURL,
@@ -74,7 +78,14 @@ $( document ).ready(function() {
                             $("#zomato3").html("<p>" + option3 + "</p>");
                         }); 
                 });
-        });
+            }
+
+
+    $("#submit-btn").on("click", function(event) {
+        event.preventDefault();
+        weatherCall();
+        restaurantCall();
+    });
 
 });
 
@@ -82,5 +93,5 @@ $( document ).ready(function() {
 window.onload = function() {
     if (window.jQuery) {
         console.log('jQuery is loaded');
-    }
+    } 
 }

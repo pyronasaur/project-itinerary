@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"</script> 
+    <link rel="stylesheet" href="assets/styles/style.css">
 
     <!-- ***jQuery first, then Popper.js, then Bootstrap JS*** --> 
     <script
@@ -22,8 +23,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 
-    <!-- ***JavaScript file link*** -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 
 </head>
 
@@ -45,21 +45,24 @@
                     </li>
                 </ul>
             </div>
+
+            
                     
             <div class="btn-group">
                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select Traveller
+                    Select Trip
                 </button>
-                <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Kenya</a>
-                                <a class="dropdown-item" href="#">Brian</a>
-                                <a class="dropdown-item" href="#">Nick</a>
-                                <a class="dropdown-item" href="#">Mohammed</a>
+                <div class="dropdown-menu" id="dropdownMenu">                                
                 </div>
             </div>   
         </nav>
     <br>
     <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mb-3">
+                <h3 id="welcome-banner" class="text-center"></h3>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="card border-success mb-3" style="max-width: 100%">
@@ -67,10 +70,10 @@
                             <h2>Search Parameters</h2>
                     </div>
                     <div class="card-body">
-                        <form id="topics-form" action="/action_page.php" class="panel-body">
+                        <form id="topics-form" class="panel-body">
                             <div class="form-group">
-                                <label for="userName-input">Destination</label>
-                                <input type="text" class="form-control" id="userLocation">
+                                <label for="location-input">Destination</label>
+                                <input type="text" class="form-control" id="location-input">
                             </div>
                             <div class="form-group">
                                 <label for="departure-input">Departure</label>
@@ -96,7 +99,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="tripName-input">Trip Name</label>
-                                <input type="number" class="form-control" id="tripName-input">
+                                <input type="text" class="form-control" id="tripName-input">
                             </div>
                             <div id="buttons">
                                 <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
@@ -120,18 +123,14 @@
             <div class="col-md-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                       <!-- <label class="input-group-text" for="inputGroupSelect01"></label>-->
                     </div>
 
                     <div class="card" id="inputGroupSelect01" >
                         <div class="card-body">
                             <h5 class="card-title">Top 3 Restaurants</h5>
-                            <!--<div class="card-text" id="zomato1">1</div>
-                            <div class="card-text" id="zomato2">2</div>
-                            <div class="card-text" id="zomato3">3</div>-->
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="zomato1"></li>
-                                 <li class="list-group-item" id="zomato2"></li>
+                                <li class="list-group-item" id="zomato2"></li>
                                 <li class="list-group-item" id="zomato3"></li>
                             </ul>
                         </div>
@@ -145,9 +144,9 @@
                         <p class="card-text"></p>
                         <div class="card-text" id="cityName"></div>
                         <div class="card-text" id="cityTime"></div>
-                        <div class="card-text"id="currentTemp"></div>
-                        <div class="card-text"id="currentWeather"></div>
-                        <div class="card-text"id="iconDiv"><img id="weatherIcon" /></div> 
+                        <div class="card-text" id="currentTemp"></div>
+                        <div class="card-text" id="currentWeather"></div>
+                        <div class="card-text" id="iconDiv"><img id="weatherIcon" /></div> 
                     </div>  
                 </div>              
             </div>             
@@ -163,5 +162,12 @@
       
     </script>
 
+
+    <!-- ***JavaScript files link*** -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="assets/javascript/firebaseConf.js"></script>
+    <script src="assets/javascript/trip_saver.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     </body>
 </html>
