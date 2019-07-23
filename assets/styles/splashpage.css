@@ -38,19 +38,19 @@
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    /*animation-iteration-count: infinite;*/
 }
 
 body {
     overflow-x: hidden;
 }
 .navbar {
-    background-color: #edeef0 !important;
+    background-color: #C6E9C6 !important;
     padding-left: 15%;
 }
 
 .content {
-    padding-top: 15%;
+    padding-top: 5%;
 }
 
 .input-buttons {
@@ -62,6 +62,33 @@ body {
 }
 
 .animated-LightSpeedIn {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 400;
+}
+.navbar ul {
+    width: 100%;
+    padding-top: 1%;
+    color: #5CB85C
+}
+
+
+.navbar ul li:first-child {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffff
+}
+
+.navbar>span {
+    color: #ffff !important;
+    padding-top: 1.5%
+}
+.navbar ul li a {
+    color: #B55A7F !important;
+}
+
+#bag_icon {
+    text-align: center;
+}
+#bag_icon img {
+    width: 105%;
 }
