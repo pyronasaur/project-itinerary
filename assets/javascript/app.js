@@ -68,14 +68,25 @@ $( document ).ready(function() {
                         url: topThreeEats_queryURL,
                         method: "GET"
                         }).then(function(response) {
-                            var option1 = response.restaurants[0].restaurant.name;
-                            $("#zomato1").html("<p>" + option1 + "</p>");
-    
-                            var option2 = response.restaurants[1].restaurant.name;
-                            $("#zomato2").html("<p>" + option2 + "</p>");
-    
-                            var option3 = response.restaurants[2].restaurant.name;
-                            $("#zomato3").html("<p>" + option3 + "</p>");
+                            var option0Name = response.restaurants[0].restaurant.name;
+                            var option0Address = response.restaurants[0].restaurant.location.address;
+                            var option0Cost = response.restaurants[0].restaurant.average_cost_for_two;
+                            var option0URL = response.restaurants[0].restaurant.menu_url;
+                            $("#zomato1").html("<div class='restaurant'><h5>" + option0Name + "</h5><p><i>" + option0Address + "</i></p><p>Cost for 2 people: <b>$" + option0Cost + "</b></p><p><a href='" + option0URL + "' target='_blank'>menu link</a></p>");
+
+                            var option1Name = response.restaurants[1].restaurant.name;
+                            var option1Address = response.restaurants[1].restaurant.location.address;
+                            var option1Cost = response.restaurants[1].restaurant.average_cost_for_two;
+                            var option1URL = response.restaurants[1].restaurant.menu_url;
+                            $("#zomato2").html("<div class='restaurant'><h5>" + option1Name + "</h5><p><i>" + option1Address + "</i></p><p>Cost for 2 people: <b>$" + option1Cost + "</b></p><p><a href='" + option1URL + "' target='_blank'>menu link</a></p>");
+
+                            var option2Name = response.restaurants[2].restaurant.name;
+                            var option2Address = response.restaurants[2].restaurant.location.address;
+                            var option2Cost = response.restaurants[2].restaurant.average_cost_for_two;
+                            var option2URL = response.restaurants[2].restaurant.menu_url;
+                            $("#zomato3").html("<div class='restaurant'><h5>" + option2Name + "</h5><p><i>" + option2Address + "</i></p><p>Cost for 2 people: <b>$" + option2Cost + "</b></p><p><a href='" + option2URL + "' target='_blank'>menu link</a></p>");
+                            
+
                         }); 
                 });
             }
