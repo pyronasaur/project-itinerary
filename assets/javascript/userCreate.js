@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('.alert').hide();
+    //$('.alert').hide();
 
     //Initialize DB
     firebase.initializeApp(firebaseConfig);
@@ -18,15 +18,9 @@ $(document).ready(function(){
         {       
             console.log("user exists already");
             $("#login-message").text("Sorry, that user exists already.  Please press login or change login name.");
-            if($('.alert').css('opacity') == 0)
-            {
-                $('.alert').fadeIn("slow");
-            }
-            else
-            {
-                $('.alert').fadeOut("slow");
-                $('.alert').fadeIn("slow");
-            }
+
+                $('.alert').show();
+            
         }
         else
         {
@@ -57,15 +51,9 @@ $(document).ready(function(){
         {
             console.log("user " + user + " does not exist");
             $("#login-message").text("Sorry, that user does not exist.  Please create new user or change login name.");
-            if($('.alert').is(':hidden'))
-            {
-                $('.alert').fadeIn("slow");
-            }
-            else
-            {
-                $('.alert').fadeOut("slow");
-                $('.alert').fadeIn("slow");
-            }
+
+            $('.alert').show();
+            
         }
     })
 

@@ -89,6 +89,11 @@ body {
 #bag_icon {
     text-align: center;
 }
+
 #bag_icon img {
     width: 105%;
+}
+
+.alert {
+    display: none;
 }
