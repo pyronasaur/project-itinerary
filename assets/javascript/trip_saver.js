@@ -98,10 +98,10 @@
           var data = snapshot.val();                        
           console.log(data);
 
-          $("#location-input").val(data.location);
           $("#departure-input").val(data.startDate);
           $("#return-input").val(data.endDate);          
           $("#tripName-input").val(tripName);
+          $("#location-input").val(data.location);          
 
           weatherCall();
           restaurantCall();
@@ -116,7 +116,7 @@
         //AccuWeather API data
         var locationKey_queryURL = ("https://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKeyAccuweather + "&q=" + userCity);
 
-        $("#location-input").val("");
+        //$("#location-input").val("");
 
         $.ajax({
             url: locationKey_queryURL,
