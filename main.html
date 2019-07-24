@@ -5,7 +5,7 @@
 <head> 
 
     <meta charset="UTF-8">
-    <title>Tripify Sidebar</title>
+    <title>Gitrippi</title>
 
     <!--***Styling links (Bootstrap, Font Awesome, Date Picker, custom css file, etc)***-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -30,8 +30,9 @@
 
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Gitrippi</a>
+        <nav class="navbar navbar-expand-lg" style="background-color: #C6E9C6">
+            <a class="navbar-brand" href="#"></a>
+            <div id="logo-img-container"><img src="assets/images/logo-main-copy.png" id="logo-img"></div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
@@ -64,10 +65,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="card border-success mb-3" style="max-width: 100%">
                     <div class="card-header">
-                            <h2>Search Parameters</h2>
+                            <h2 style="text-align:center">Plan a Trip</h2>
                     </div>
                     <div class="card-body">
                         <form id="topics-form" class="panel-body">
@@ -109,18 +110,19 @@
                     </div>
                 </div>
             </div>   
-            <div class="col-md-3">
-                <div class="card" style="max-width: 100%">
-                    <div class="card-header">Trip Information</div>
+            <div class="col-lg-3">
+                <div class="card border-success mb-3" style="max-width: 100%">
+                    <div class="card-header" class="trip-btn-main"><h4 class="card-title" style="text-align:center">
+                        Trip Information</h4></div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Find Restaurants</li>
-                         <li class="list-group-item">Shopping</li>
-                        <li class="list-group-item">Events</li>
+                        <li class="list-group-item" class="trip-btn">Find Restaurants</li>
+                         <li class="list-group-item" class="trip-btn">Shopping</li>
+                        <li class="list-group-item" class="trip-btn">Events</li>
                     </ul>
                 </div>
             </div>
                 
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                     </div>
@@ -129,12 +131,15 @@
                         <div class="card-body">
                             <h5 class="card-title">Top 3 Restaurants</h5>
                             <h6 class="card-subtitle text-muted text-right">for your destination</h6>
+                        <div class="card border-success mb-3" id="inputGroupSelect01">
+                        <div class="card-header" class="trip-btn-main"><h4 class="card-title" style="text-align:center">Top 3 Restaurants</h4><div>
+                        <div class="card-body"> 
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="zomato1"></li>
                                 <li class="list-group-item" id="zomato2"></li>
                                 <li class="list-group-item" id="zomato3"></li>
                             </ul>
-                        </div>
+                       </div>
                     </div>
                 </div>
             </div>
