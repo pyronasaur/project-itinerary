@@ -24,7 +24,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 
 
-
 </head>
 
 
@@ -110,6 +109,7 @@
                     </div>
                 </div>
             </div>   
+
             <div class="col-lg-3">
                 <div class="card border-success mb-3" style="max-width: 100%">
                     <div class="card-header" class="trip-btn-main"><h4 class="card-title" style="text-align:center">
@@ -121,60 +121,53 @@
                     </ul>
                 </div>
             </div>
-                
-            <div class="col-lg-3">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                    </div>
-
-                    <div class="card" id="inputGroupSelect01" >
+                            
+            <div class="col-lg-3" id="restaurantColumn">
+                    <div class="card border-success mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Top 3 Restaurants</h5>
-                            <h6 class="card-subtitle text-muted text-right">for your destination</h6>
-                        <div class="card border-success mb-3" id="inputGroupSelect01">
-                        <div class="card-header" class="trip-btn-main"><h4 class="card-title" style="text-align:center">Top 3 Restaurants</h4><div>
-                        <div class="card-body"> 
+                            <h6 class="card-subtitle text-muted text-center">for your destination</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="zomato1"></li>
                                 <li class="list-group-item" id="zomato2"></li>
                                 <li class="list-group-item" id="zomato3"></li>
                             </ul>
-                       </div>
+                        </div>
                     </div>
-                </div>
             </div>
-            <div class="col-lg-3"> 
-                <div class="card" style="width: 18rem;">
+
+                        
+            <div class="col-lg-3" id="weatherColumn"> 
+                <div class="card border-success mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Current Weather</h5>
-                        <h6 class="card-subtitle text-muted text-right">for your destination</h6><hr />
+                        <h6 class="card-subtitle text-muted text-center">for your destination</h6><hr />
                             <div class="card-text" id="cityName"></div>
                             <div class="card-text" id="weatherData"></div>
-                            <!--<div class="card-text" id="cityTime"></div>
-                            <div class="card-text" id="currentTemp"></div>
-                            <div class="card-text" id="currentWeather"></div>-->
                             <div class="card-text" id="iconDiv"><img id="weatherIcon" /></div> 
                     </div>
                 </div>              
-            </div>             
-        </div>
-    </div>
+            </div>          
    
+    </div>
 
     <script> 
     
         $('#datetimepicker1').datepicker();
-
         $('#datetimepicker2').datepicker();
       
     </script>
 
 
+
     <!-- ***JavaScript files link*** -->
+  
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
     <script src="assets/javascript/firebaseConf.js"></script>
     <script src="assets/javascript/trip_saver.js"></script>
+
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+
     </body>
 </html>
