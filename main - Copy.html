@@ -5,7 +5,7 @@
 <head> 
 
     <meta charset="UTF-8">
-    <title>Gitrippi</title>
+    <title>Tripify Sidebar</title>
 
     <!--***Styling links (Bootstrap, Font Awesome, Date Picker, custom css file, etc)***-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -24,24 +24,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 
 
+
 </head>
 
 
 <body>
 
-        <nav class="navbar navbar-expand-lg" style="background-color: #C6E9C6">
-            <a class="navbar-brand" href="#"></a>
-            <div id="logo-img-container"><img src="assets/images/logo-main-copy.png" id="logo-img"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Gitrippi</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Logout</a>
+                        <a class="nav-link" href="#">Logout</a>
                 </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="/Users/kenyaking/Repositories/Bootstrap-Portfolio/portfolio.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="file:///Users/kenyaking/Repositories/Bootstrap-Portfolio/contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +67,7 @@
             <div class="col-lg-3">
                 <div class="card border-success mb-3" style="max-width: 100%">
                     <div class="card-header">
-                            <h2 style="text-align:center">Plan a Trip</h2>
+                            <h2>Search Parameters</h2>
                     </div>
                     <div class="card-body">
                         <form id="topics-form" class="panel-body">
@@ -109,24 +109,26 @@
                     </div>
                 </div>
             </div>   
-
             <div class="col-lg-3">
-                <div class="card border-success mb-3" style="max-width: 100%">
-                    <div class="card-header" class="trip-btn-main"><h4 class="card-title" style="text-align:center">
-                        Trip Information</h4></div>
+                <div class="card" style="max-width: 100%">
+                    <div class="card-header">Trip Information</div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" class="trip-btn">Find Restaurants</li>
-                         <li class="list-group-item" class="trip-btn">Shopping</li>
-                        <li class="list-group-item" class="trip-btn">Events</li>
+                        <li class="list-group-item">Find Restaurants</li>
+                         <li class="list-group-item">Shopping</li>
+                        <li class="list-group-item">Events</li>
                     </ul>
                 </div>
             </div>
-                            
-            <div class="col-lg-3" id="restaurantColumn">
-                    <div class="card border-success mb-3">
+                
+            <div class="col-lg-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+
+                    <div class="card" id="inputGroupSelect01" >
                         <div class="card-body">
                             <h5 class="card-title">Top 3 Restaurants</h5>
-                            <h6 class="card-subtitle text-muted text-center">for your destination</h6>
+                            <h6 class="card-subtitle text-muted text-right">for your destination</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="zomato1"></li>
                                 <li class="list-group-item" id="zomato2"></li>
@@ -134,40 +136,40 @@
                             </ul>
                         </div>
                     </div>
+                </div>
             </div>
-
-                        
-            <div class="col-lg-3" id="weatherColumn"> 
-                <div class="card border-success mb-3">
+            <div class="col-lg-3"> 
+                <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Current Weather</h5>
-                        <h6 class="card-subtitle text-muted text-center">for your destination</h6><hr />
+                        <h6 class="card-subtitle text-muted text-right">for your destination</h6><hr />
                             <div class="card-text" id="cityName"></div>
                             <div class="card-text" id="weatherData"></div>
+                            <!--<div class="card-text" id="cityTime"></div>
+                            <div class="card-text" id="currentTemp"></div>
+                            <div class="card-text" id="currentWeather"></div>-->
                             <div class="card-text" id="iconDiv"><img id="weatherIcon" /></div> 
                     </div>
                 </div>              
-            </div>          
-   
+            </div>             
+        </div>
     </div>
+   
 
     <script> 
     
         $('#datetimepicker1').datepicker();
+
         $('#datetimepicker2').datepicker();
       
     </script>
 
 
-
     <!-- ***JavaScript files link*** -->
-  
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
     <script src="assets/javascript/firebaseConf.js"></script>
     <script src="assets/javascript/trip_saver.js"></script>
-
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-
     </body>
 </html>

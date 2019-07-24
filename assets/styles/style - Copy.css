@@ -1,12 +1,4 @@
 
-
-
-body {
-    background-image: url("../images/papyrus.png");
-}
-
-
-
 .search-type{
     display: flex;
         padding-top: 50px;
@@ -30,34 +22,8 @@ body {
     margin:0.5em;
     color:#274e27;
 }
-#restaurantColumn {
-    visibility:hidden;
-}
 .weather p {
     font-size:0.8em;
     margin:0.5em;
     color:#274e27;
 }
-#weatherColumn {
-    visibility:hidden;
-}
-
-    a:hover { 
-        color: #B85C80;
-      }
-
-      li:hover {
-          color: grey;
-      }
-
-      .navbar {
-          line-height: 5;
-      }
-
-      #logo-img {
-          max-width: 200px;
-          margin: 20px;
-      }
-      .nav-link {
-          color: #5CB85C;
-      }
