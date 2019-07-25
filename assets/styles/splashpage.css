@@ -43,11 +43,15 @@
 
 body {
     overflow-x: hidden;
+    background-image: url('../images/papyrus.png');
+    background-repeat: repeat;
+    
 }
 .navbar {
     background-color: #C6E9C6 !important;
     padding-left: 15%;
 }
+
 
 .content {
     padding-top: 5%;
@@ -71,11 +75,13 @@ body {
     color: #5CB85C
 }
 
-
-.navbar ul li:first-child {
-    font-size: 15px;
+.navbar ul li {
+    list-style-type: none;
+    display: inline;
+    padding-left: 1%
+    padding-right: 1%
+    width: 120px;
     font-weight: 600;
-    color: #ffff
 }
 
 .navbar>span {
@@ -94,6 +100,20 @@ body {
     width: 105%;
 }
 
+
+#button-create-user {
+    background: #B55A7F;
+    width: 30%;
+}
+    
+
+#button-login {
+    background: #5CB85C;
+    width: 30%;
+}
+        
+
 .alert {
     display: none;
 }
+
