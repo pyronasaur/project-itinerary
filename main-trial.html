@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tripify Sidebar</title>
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
+
+<script> src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"</script> 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</head>
+
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Gitrippi</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Users/kenyaking/Repositories/Bootstrap-Portfolio/portfolio.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///Users/kenyaking/Repositories/Bootstrap-Portfolio/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+                    
+            <div class="btn-group">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Traveller
+                </button>
+                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Kenya</a>
+                                <a class="dropdown-item" href="#">Brian</a>
+                                <a class="dropdown-item" href="#">Nick</a>
+                                <a class="dropdown-item" href="#">Mohammed</a>
+                </div>
+            </div>   
+        </nav>
+    <br>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card border-success mb-3" style="max-width: 100%">
+                <div class="card-header">
+                        <h2>Search Parameters</h2>
+                </div>
+                <div class="card-body">
+                    <form id="topics-form" action="/action_page.php" class="panel-body">
+                        <div class="form-group">
+                            <label for="userName-input">Destination</label>
+                            <input type="text" class="form-control" id="userName-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="departure-input">Departure</label>
+                            <div class="input-group date" id="datetimepicker1">
+                                <input type="text" class="form-control" id="departure-input" />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-input">Return</label>
+                            <div class="input-group date" id="datetimepicker2">
+                                <input type="text" class="form-control" id="return-input" />
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode-input">Zip Code</label>
+                            <input type="number" class="form-control" id="zipCode-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="tripName-input">Trip Name</label>
+                            <input type="number" class="form-control" id="tripName-input">
+                        </div>
+                        <div id="buttons">
+                            <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
+                            <button type="reset" class="btn btn-success" id="reset-btn">Reset</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>   
+        <div class="col-md-3">
+            <div class="card" style="max-width: 100%">
+                <div class="card-header">Trip Information</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Find Restaurants</li>
+                            <li class="list-group-item">Shopping</li>
+                            <li class="list-group-item">Events</li>
+                        </ul>
+                </div>
+            </div>
+            
+        <div class="col-md-3">
+            <div class="input-group mb-3" style="max-width: 100%;">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01"></label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01" multiple>
+                        <option selected>Choose...</option>
+                        <option value="1">Carraba's Italian Grill</option>
+                        <option value="2">Ruth Chris Stakehouse</option>
+                        <option value="3">Rays on the River</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3"> 
+            <div class="card" style="max-width: 100%;;">
+                <img src="#" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Map Your Location</h5>
+                              <p class="card-text"></p>
+                    </div>
+            </div>  
+        </div>              
+    </div>
+    </div>
+   
+
+    <script> 
+    
+        $('#datetimepicker1').datepicker();
+
+        $('#datetimepicker2').datepicker();
+      
+    </script>
+
+    </body>
+</html>

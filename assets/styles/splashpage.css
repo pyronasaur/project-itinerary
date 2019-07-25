@@ -95,9 +95,11 @@ body {
 #bag_icon {
     text-align: center;
 }
+
 #bag_icon img {
     width: 105%;
 }
+
 
 #button-create-user {
     background: #B55A7F;
@@ -110,3 +112,8 @@ body {
     width: 30%;
 }
         
+
+.alert {
+    display: none;
+}
+

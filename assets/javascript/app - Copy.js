@@ -6,6 +6,7 @@ $( document ).ready(function() {
 
 
 
+
     function weatherCall() {    
         userCity = $("#location-input").val();
         
@@ -13,7 +14,7 @@ $( document ).ready(function() {
         //AccuWeather API data
         var locationKey_queryURL = ("https://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKeyAccuweather + "&q=" + userCity);
 
-        //$("#location-input").val("");
+        $("#location-input").val("");
 
         $.ajax({
             url: locationKey_queryURL,
@@ -91,9 +92,6 @@ $( document ).ready(function() {
 
 
     $("#submit-btn").on("click", function(event) {
-        $("#weatherColumn").css("visibility","visible");
-        $("#restaurantColumn").css("visibility","visible");
-
         event.preventDefault();
         weatherCall();
         restaurantCall();
