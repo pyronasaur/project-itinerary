@@ -93,10 +93,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="zipCode-input">Zip Code</label>
-                                <input type="number" class="form-control" id="zipCode-input">
-                            </div>
+                            
                             <div class="form-group">
                                 <label for="tripName-input">Trip Name</label>
                                 <input type="text" class="form-control" id="tripName-input">
@@ -116,8 +113,7 @@
                         Trip Information</h4></div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" class="trip-btn">Find Restaurants</li>
-                         <li class="list-group-item" class="trip-btn">Shopping</li>
-                        <li class="list-group-item" class="trip-btn">Events</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -152,9 +148,31 @@
     </div>
 
     <script> 
-    
-        $('#datetimepicker1').datepicker();
-        $('#datetimepicker2').datepicker();
+    $(document).ready(function(){
+        var start = new Date();
+        console.log(start);
+
+        $("#departure-input").datepicker("setDate", "today");
+        $("#return-input").datepicker("setDate", "today");
+        var departureDay; //= $("#departure-input").val();
+        //var returnDay = $("#return-input").val();
+
+        $("#departure-input").datepicker("setStartDate", start);
+
+        //listener
+        $("#departure-input").on("changeDate", function(){
+            
+            departureDay = $("#departure-input").val();
+            $("#return-input").datepicker("setDate", departureDay);
+            $("#return-input").datepicker("setStartDate", departureDay);
+        })
+        
+        $("#reset-btn").on("click", function(){
+            $("#weatherColumn").css("visibility","hidden");
+            $("#restaurantColumn").css("visibility","hidden");
+        })
+           
+    });
       
     </script>
 
