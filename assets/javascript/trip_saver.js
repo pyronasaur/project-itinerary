@@ -195,4 +195,14 @@
               });
           }
 
+
+          $("#submit-btn").on("click", function(event) {
+              $("#weatherColumn").css("visibility","visible");
+              $("#restaurantColumn").css("visibility","visible");
+      
+              event.preventDefault();
+              weatherCall();
+              restaurantCall();
+          });
+
 });
